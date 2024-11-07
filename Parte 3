@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Contato</title>
+  <style>
+    body 
+    {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f8f8f8;
+    }
+    .form-container
+    {
+    background-color: white;
+    padding: 50px;
+    border-radius: 0px;
+    box-shadow: 0px 0px rgba(0, 0, 0, 0);
+    width: 600px;
+    text-align: center;
+    }
+    .h2 
+    {
+    color: #000080;
+    margin-bottom: 20px;
+    }
+    .form-container input,
+    .form-container textarea,
+    .form-container button 
+    {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    font-size: 20px;
+    }
+    .form-container button 
+    {
+    background-color: #230659;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    }
+    .form-container button:hover 
+    {
+    background-color: #3f2619;
+    }
+    .messagem 
+    {
+    color: #D2691E;
+    font-size: 25px;
+    }
+    .success 
+    {
+    color: #0f2f8f;
+    font-size: 25px;
+    }
+    .error 
+    {
+    color: #D2691E;
+    font-size: 25px;
+    }
+    </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Formulário</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Nome">
+      <input type="email" id="email" placeholder="Email">
+      <textarea id="message" rows="4" placeholder="mensagem"></textarea>
+      <button type="button" onclick="validateForm()">Enviar</button>
+      <p id="feedback" class="message"></p>
+    </form>
+  </div>
+  <script>
+    function validateForm() 
+    {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    if (name === "" || email === "" || message === "")
+    {
+    feedback.textContent = "Favor preencher todos os campos.";
+    feedback.classList.add("error");
+    return;
+    }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) 
+    {
+    feedback.textContent = "Favor inserir um email válido.";
+    feedback.classList.add("error");
+    return;
+    }
+    feedback.textContent = "Formulário enviado com sucesso!";
+    feedback.classList.add("success");
+    }
+    </script>
+</body>
+</html>
