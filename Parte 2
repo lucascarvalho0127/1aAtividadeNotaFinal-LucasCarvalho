@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="Preços">
+  <title>Tabela de valores</title>
+  <style>
+  table 
+  {
+  width: 90%;
+  margin: 25px
+  font-size: 20px;
+  }
+  th 
+  {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  }
+  td 
+  {
+  padding: 20px;
+  border: 20px
+  }
+  tr:nth-child(even) 
+  {
+  background-color: #DCDCDC;
+  }
+  tr:hover
+  {
+  background-color: #CD5C5C;
+  }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>cor</th>
+        <th>Custo</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Teclado</td>
+        <td>Preto</td>
+        <td>R$ 75</td>
+      </tr>
+      <tr>
+        <td>Mouse</td>
+        <td>Branco RGB</td>
+        <td>R$ 150</td>
+      </tr>
+      <tr>
+        <td>Mousepad</td>
+        <td>Cinza com preto</td>
+        <td>R$ 25</td>
+      </tr>
+        <tr>
+        <td>HeadPhone</td>
+        <td>Vermelho e preto</td>
+        <td>R$ 180</td>
+      </tr>
+      <tr>
+        <td>Cadeira</td>
+        <td>Full preto</td>
+        <td>R$ 799</td>
+      </tr>
+      </tbody>
+    </table>
+</body>
+</html>
