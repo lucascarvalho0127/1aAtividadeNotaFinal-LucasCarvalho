@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="IMC">
+  <title>Calculadora de IMC</title>
+  <style>
+    body 
+    {
+    justify-content: center;
+    align-items: center;
+    background-color: #C0C0C0;
+    }
+    .calculator-container input 
+    {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    }
+    .calculator-container button 
+    {
+    width: 100%;
+    padding: 10px;
+    background-color: #0a24b5;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    }
+    .result 
+    {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #1C1C1C;
+    }
+    </style>
+</head>
+<body>
+  <div class="calculator-container">
+    <h2>Calculadora de IMC</h2>
+    <form id="imcForm" onsubmit="return false;">
+      <input type="number" id="peso" placeholder="Peso(kg)" step="0" min="0">
+      <input type="number" id="altura" placeholder="Altura(m)" step="0" min="0">
+      <button onclick="calcularIMC()">Calcular IMC</button>
+    </form>
+    <p id="resultado" class="result"></p>
+  </div>
+  <script>
+    function calcularIMC()
+    {
+    const peso = parseFloat(document.getElementById("peso").value);
+    const altura = parseFloat(document.getElementById("altura").value);
+    const resultado = document.getElementById("resultado");
+    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0)
+    {
+    resultado.textContent = "Favor, inserir valores válidos.";
+    return;
+    }
+    const imc = peso / (altura * altura);
+    resultado.textContent = `Seu IMC é: ${imc.toFixed(2)}`;
+    }
+    </script>
+</body>
+</html>
