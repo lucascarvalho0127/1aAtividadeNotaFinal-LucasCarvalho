@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="Minha formação">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="perfil">
+        <div class="imagem">
+           <img src="perfil.jpg" alt="Foto">
+        </div>
+        <h1>Lucas Carvalho</h1>
+        <h2>Matrícula: 202403689571</h2>
+        <p>Eu sou Lucas, cursando Ciências da computação.</p><br>
+        <p> Tenho aprendido muitas coisas sobre programação e hardwares e como são executados.
+        Tenho buscado alguma área na qual me identifique completamente, são tantas que eu até perco um pouco rsrs.</p><br>
+        <p>Estou muito contente de cursar a área dos sonhos e planejo focar mais na área da segurança, mas ainda explorando outras diciplinas para ter certeza.</p>
+        <div class="sonho">
+           <span>Cybersecurity</span>
+        </div>
+    </div>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Css:
+
+body 
+{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f1f1f2;
+}
+.perfil 
+{
+background-color: #fcfcfc;
+padding: 20px;
+border-radius: 20px;
+text-align: center;
+ width: 300px;
+}
+.imagem img 
+{
+width: 100px;
+height: 100px;
+border-radius: 50%;
+margin-bottom: 15px;
+}
+h1 
+{
+color: #312f2f;
+margin: 0;
+}
+h2 
+{
+color: #f8a55c;
+margin: 5px 0 15px;
+}
+.sonho 
+{
+margin-top: 15px;
+color: #0076f4;
+}
